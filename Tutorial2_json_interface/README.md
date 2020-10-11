@@ -1,6 +1,6 @@
 # 使用Flask开发一个JSON Web服务
 
-# 安装依赖
+## 安装依赖
 
 ```powershell
 pip install Flask
@@ -9,11 +9,13 @@ pip install pytest
 pip install coverage
 ```
 
-# 启动flask web服务器
+## 启动flask web服务器
 
-    python app.py
+```powershell
+python app.py
+```
 
-终端显示，默认在5000端口监听
+输入如下：
 
 > \* Serving Flask app "app" (lazy loading) <br>
 > \* Environment: production <br>
@@ -22,8 +24,8 @@ pip install coverage
 > \* Debug mode: off <br>
 > \* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) <br>
 
-# 测试服务
-可能使用任何web客户端和浏览器测试服务。推荐使用[Postman](https://www.getpostman.com/).
+
+启动后，可以使用任何web客户端和浏览器测试服务，推荐使用[Postman](https://www.getpostman.com/)进行测试
 
     curl -L 'http://127.0.0.1:5000/cal/add/10/30'
 
@@ -31,11 +33,11 @@ pip install coverage
     
 > {"ok":true,"result":40}
 
-# Test and Coverage
+## Test and Coverage
 
-利用[pytest](http://www.pytest.org/en/latest/)和[coverage](https://coverage.readthedocs.io/en/v4.5.x/)测试和评估代码
+在完成所有功能开发后，利用[pytest](http://www.pytest.org/en/latest/)和[coverage](https://coverage.readthedocs.io/en/v4.5.x/)测试和评估代码
 
-执行单元测试
+- 执行单元测试
     pytest
 
 覆盖率测试:
@@ -48,9 +50,4 @@ pip install coverage
 
 显示覆盖率报告:
 
-> Name                    Stmts   Miss Branch BrPart  Cover <br>
-> --------------------------------------------------------- <br>
-> calculate\__init__.py       6      0      0      0   100% <br>
-> calculate\cal.py           20      0      8      0   100% <br>
-> --------------------------------------------------------- <br>
-> TOTAL                      26      0      8      0   100% <br>
+<img src="./coverage_report.PNG">
